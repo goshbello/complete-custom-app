@@ -21,6 +21,12 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test 'should get contact' do
+    get contact_path
+    assert_response :success
+    assert_select "title", "Contact | Complete Custom App"
+  end
+
   # here are the step to adding about
   # => we run the test and got this error while checking for about page. Note that the other two test has already passed, we had the code, we just test if we can assess their urls (paths) and it all passed. This time we want to use TDD to add about page. We got this error when we run the test after adding about
 

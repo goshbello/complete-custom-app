@@ -1,0 +1,175 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+$main-black: #111827;
+$black-500: #6b7280;
+$black-300: #d1d5db;
+$primary-color: #881337;
+$primary-200: #fecdd3;
+$primary-400: #fb7185;
+$transition: all 0.3s linear;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// sitcky footer styling
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #eee;
+}
+.Site-content {
+  flex: 1;
+}
+
+.nav-main-bg {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.nav-logo-style {
+  color: $primary-400;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: $main-black;
+  }
+}
+
+// nav a-tag style
+.nav-link-style {
+  color: $black-500;
+  font-size: 1.2rem;
+  transition: $transition;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    color: $primary-400;
+  }
+}
+
+// humburger style (bars)
+.humburger-style {
+  color: $black-500;
+}
+// border around the bars
+.navbar-toggler,
+.navbar-toggler-icon{
+border: 2px solid $black-300;
+transition: $transition;
+}
+// toggler hover and focus
+.navbar-toggler:hover,
+.navbar-toggler-icon:hover {
+    outline: none;
+    box-shadow: none;
+    border-color: $primary-color;
+    transform: scale(1.1);
+}
+
+// body styles
+.card {
+  margin-top: 10rem;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.card .card-title {
+  font-size: 3rem;
+  color: #fff;
+  margin: 4rem 0;
+  letter-spacing: 1px;
+}
+.card .card-text {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.btn-color {
+  background-color: $primary-200;
+  color: $primary-color;
+  // transition: $transition; note once we using animation, we dont need transition anymore
+  margin: 2rem 0;
+  animation: signup-bouncing 1s ease-in-out infinite;
+
+  &:hover {
+    color: $primary-color;
+    animation-play-state: paused; // This means when we hover over the button, pause the animation
+
+  }
+}
+
+// footer 
+.footer {
+  background-color: $primary-400;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 10rem;
+
+  &_copyright, .copyright-a-tag {
+    color: $white;
+    text-decoration: none;
+
+
+    .copyright-a-tag:hover {
+      color: $main-black;
+    }
+  }
+
+  &_links{
+
+    .f-ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0;
+
+       a {
+        text-decoration: none;
+        margin-right: 1rem;
+        color: $white;
+
+        &:hover {
+          color: $main-black;
+        }
+       
+      }
+    }
+  }
+}
+
+// Styling for every page title
+.page-title {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+// animation
+@keyframes signup-bouncing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

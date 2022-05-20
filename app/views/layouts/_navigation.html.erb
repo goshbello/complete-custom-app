@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg nav-main-bg">
+  <div class="container">
+    <%= link_to "Goshbello", root_path, class:"navbar-brand nav-logo-style" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="humburger-style" role="button" ><i class="fa fa-bars" aria-hidden="true"></i></span>
+</button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class:"nav-link active nav-link-style" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Help", help_path, class:"nav-link active nav-link-style" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log in", root_path, class:"nav-link active nav-link-style" %>
+        </li>
+        <%# <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li> %>
+      </ul>
+    </div>
+  </div>
+</nav>
