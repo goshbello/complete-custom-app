@@ -1,7 +1,8 @@
+<% provide(:title, 'Home') %>
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Welcome to Goshbello App</h5>
     <p class="card-text">This is the home page for the Ruby on Rails Tutorial sample application</p>
-    <a href="#" class="btn btn-color">Sign up now!</a>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-color" %>
   </div>
 </div>

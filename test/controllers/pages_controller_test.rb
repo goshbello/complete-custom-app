@@ -6,25 +6,27 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   test 'should get index' do
     get root_path
     assert_response :success
-    assert_select "title", "Home | Complete Custom App"
+    assert_select "title"
   end
 
   # test to ensure we can successful access the help page path (url)
   test 'should get help' do
     get help_path
     assert_response :success
+    assert_select "title"
   end
 
   # Here we adding about page using TDD, We try and check for about page which didnt exist, then we will write code to get a pass
   test 'should get about' do
     get about_path
     assert_response :success
+    assert_select "title"
   end
 
   test 'should get contact' do
     get contact_path
     assert_response :success
-    assert_select "title", "Contact | Complete Custom App"
+    assert_select "title"
   end
 
   # here are the step to adding about
