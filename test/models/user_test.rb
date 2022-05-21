@@ -5,7 +5,8 @@ class UserTest < ActiveSupport::TestCase
   # Here since we dont have any validation for the model yet, we will write a pass test first. Meaning we saying this is format we want every entry into the database should be
 
   def setup
-    @user = User.new(name: "Example User", email: "user@bootcamp.com")
+    @user = User.new(name: "Example User", email: "user@bootcamp.com",
+                    password: "password", password_confirmation: "password")
   end
 
   #if entry is like the above, then its valid
@@ -51,5 +52,17 @@ class UserTest < ActiveSupport::TestCase
   test "email addresses should be saved as lower-case" do
 
   end 
+
+  #password requirement test
+  test "password should be present" do
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
+  end
+
+  # password minimum is 6
+  test "password should have a minimum of 6" do
+    @user.password = @user.password_confirmation = "a" * 5
+    assert_not @user.valid?
+  end
 
 end
