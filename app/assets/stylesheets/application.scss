@@ -1,4 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap';
+@import "bootstrap/dist/css/bootstrap";
 
 $main-black: #111827;
 $black-500: #6b7280;
@@ -66,24 +66,25 @@ $white: #fff;
 }
 // border around the bars
 .navbar-toggler,
-.navbar-toggler-icon{
-border: 2px solid $black-300;
-transition: $transition;
+.navbar-toggler-icon {
+  border: 2px solid $black-300;
+  transition: $transition;
 }
 // toggler hover and focus
 .navbar-toggler:hover,
 .navbar-toggler-icon:hover {
-    outline: none;
-    box-shadow: none;
-    border-color: $primary-color;
-    transform: scale(1.1);
+  outline: none;
+  box-shadow: none;
+  border-color: $primary-color;
+  transform: scale(1.1);
 }
 
 // body styles
 .card {
   margin-top: 10rem;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("hero-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("hero-bg.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
@@ -109,11 +110,10 @@ transition: $transition;
   &:hover {
     color: $primary-color;
     animation-play-state: paused; // This means when we hover over the button, pause the animation
-
   }
 }
 
-// footer 
+// footer
 .footer {
   background-color: $primary-400;
   font-size: 1.2rem;
@@ -123,24 +123,23 @@ transition: $transition;
   align-items: center;
   padding: 0.5rem 10rem;
 
-  &_copyright, .copyright-a-tag {
+  &_copyright,
+  .copyright-a-tag {
     color: $white;
     text-decoration: none;
-
 
     .copyright-a-tag:hover {
       color: $main-black;
     }
   }
 
-  &_links{
-
+  &_links {
     .f-ul {
       display: flex;
       list-style: none;
       margin-bottom: 0;
 
-       a {
+      a {
         text-decoration: none;
         margin-right: 1rem;
         color: $white;
@@ -148,7 +147,6 @@ transition: $transition;
         &:hover {
           color: $main-black;
         }
-       
       }
     }
   }
@@ -156,7 +154,8 @@ transition: $transition;
 
 // Styling for every page title
 .page-title {
-  margin-top: 10rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -173,3 +172,80 @@ transition: $transition;
   }
 }
 
+// Styling for debug box
+$gray-medium-light: #eee;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+// style profile image
+.gravatar {
+  border-radius: 50%;
+}
+
+// create account form styling
+.wrapper {
+  width: 500px;
+  max-width: 80%;
+  margin: auto;
+  background-color: green;
+}
+.form-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.form-each input {
+  width: 100%;
+  height: 40px;
+  background-color: $gray-medium-light;
+  // outline: transparent;
+  border: 1px solid silver;
+  margin: 10px 0 18px 0;
+  padding: 0 10px;
+}
+.btn-createAccount {
+  background-color: $primary-200;
+  color: $primary-color;
+  border: transparent;
+  outline: transparent;
+  border-radius: 5px;
+  padding: 9px 9px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: $primary-400;
+  }
+}
+
+// alert style
+.error_explanation {
+  ul {
+    color: red;
+    margin-bottom: 30px;
+  }
+}
+.field_with_errors input {
+  border: 1px solid red !important;
+}
+
+// Alert display div pushed down style
+#alert-style {
+  margin-top: 5rem;
+  margin-bottom: -4rem;
+}
