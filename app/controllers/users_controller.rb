@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # If we want to login user after signup. Then we will add this line before the flash message
+      log_in @user
       flash[:success] = "Welcome to our App!"
       redirect_to @user
     else

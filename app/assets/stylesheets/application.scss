@@ -50,13 +50,27 @@ $white: #fff;
 
 // nav a-tag style
 .nav-link-style {
-  color: $black-500;
+  color: $black-500 !important;
   font-size: 1.2rem;
   transition: $transition;
   letter-spacing: 0.5px;
 
   &:hover {
+    color: $primary-400 !important;
+  }
+}
+
+// dropdown menu
+.dropdown-menu {
+  margin-top: 0.6rem !important;
+}
+.logout-color-red {
+  color: $primary-400;
+  font-weight: 500;
+
+  &:hover {
     color: $primary-400;
+    font-weight: 500;
   }
 }
 
@@ -248,4 +262,9 @@ $gray-medium-light: #eee;
 #alert-style {
   margin-top: 5rem;
   margin-bottom: -4rem;
+}
+
+// login form style for the last line
+.login-or-signup-link-style {
+  margin-top: 9px;
 }
